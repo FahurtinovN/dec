@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мой интернет-магазин</title>
+</head>
+<body>
+    <h1>Добро пожаловать в мой интернет-магазин!</h1>
+
+    <h2>Все товары:</h2>
+    <form action="", method="post">
+        <ul>
+        {% for i in product %}
+            <li>
+                <p>Имя: {{ product.name }}</p>
+                <p>Описание: {{ product.description }}</p>
+                <p>Цена: {{ product.price }}</p>
+            </li>
+        {% empty %}
+            <li>Нет товаров в наличии.</li>
+        {% endfor %}
+        <button>add product</button>
+        </ul>
+    </form>
+
+</body>
+</html>
